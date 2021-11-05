@@ -64,7 +64,8 @@ extension ViewController {
                 configuration: conf,
                 queueID: queueID,
                 visitorContext: visitorContext,
-                theme: theme
+                theme: theme,
+                features: []
             )
         } catch {
             alert(message: "Failed to start\nCheck Glia parameters in Settings")
