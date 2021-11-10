@@ -24,8 +24,11 @@ internal class FontProvider {
     }
 
     private func loadFont(named name: String) -> Bool {
+        #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+        #else
         let bundle = Bundle(for: BundleToken.self)
-
+        #endif
         guard
             let pathForResourceString = bundle.path(forResource: name, ofType: "ttf"),
             let fontData = NSData(contentsOfFile: pathForResourceString),

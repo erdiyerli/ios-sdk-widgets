@@ -1,4 +1,5 @@
 import SalemoveSDK
+import UIKit
 
 extension AlertViewController {
     func makeMediaUpgradeAlertView(

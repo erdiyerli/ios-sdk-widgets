@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "GliaWidgets",
+    defaultLocalization: .init(stringLiteral: "en"),
     platforms: [
         .iOS(.v12)
     ],
@@ -29,10 +30,17 @@ let package = Package(
             url: "https://github.com/salemove/ios-bundle/releases/download/0.31.0/SalemoveSDK.xcframework.zip",
             checksum: "d02bf87ffca0a42a8c7f4243912bd8bb6b9c12759c8081e6e550895363acb3a9"
         ),
-        .binaryTarget(
+        .target(
             name: "GliaWidgets",
-            url: "https://github.com/salemove/ios-sdk-widgets/releases/download/0.5.7/GliaWidgets.xcframework.zip",
-            checksum: "17a2b1ff4ddda09dd2407ff8c78b18e965e1486529b15f47c82ed347c2f134bd"
+            path: "GliaWidgets",
+            exclude: [
+                "Cartfile.resolved",
+                "Cartfile",
+                "Info.plist"
+            ],
+            resources: [
+                .process("Resources")
+            ]
         ),
         .binaryTarget(
             name: "PureLayout",

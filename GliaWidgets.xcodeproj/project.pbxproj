@@ -660,6 +660,12 @@
 		1A205D5A25655CB1003AA3CD /* GliaWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				1A60AFB12566821B00E53F53 /* Asset.swift */,
+				1A60AF8F256674F000E53F53 /* Font.swift */,
+				1A60AF9E25667CA800E53F53 /* FontProvider.swift */,
+				1A60AF92256674F900E53F53 /* Color.swift */,
+				1A60AFAE256680EF00E53F53 /* L10n.swift */,
+				1A60AF95256675C400E53F53 /* UIColor+Extensions.swift */,
 				1A60AF6825656C0200E53F53 /* Coordinator */,
 				1A60AF6725656BF200E53F53 /* ViewController */,
 				1A60AF6925656C0A00E53F53 /* View */,
@@ -975,12 +981,6 @@
 			isa = PBXGroup;
 			children = (
 				1A60AF982566789F00E53F53 /* Font */,
-				1A60AFB12566821B00E53F53 /* Asset.swift */,
-				1A60AF8F256674F000E53F53 /* Font.swift */,
-				1A60AF9E25667CA800E53F53 /* FontProvider.swift */,
-				1A60AF92256674F900E53F53 /* Color.swift */,
-				1A60AFAE256680EF00E53F53 /* L10n.swift */,
-				1A60AF95256675C400E53F53 /* UIColor+Extensions.swift */,
 				1A60AFA225667EA300E53F53 /* Assets.xcassets */,
 				1A60AFAC2566806000E53F53 /* Localizable.strings */,
 				6EA3512526DE9F3400BF5941 /* operator-typing-indicator.json */,
