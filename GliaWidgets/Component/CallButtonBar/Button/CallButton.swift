@@ -74,7 +74,11 @@ class CallButton: UIView {
                                                    action: #selector(tapped))
         addGestureRecognizer(tapRecognizer)
 
+        isAccessibilityElement = true
+        accessibilityTraits = [.button]
+
         update(for: state)
+
     }
 
     private func layout() {
@@ -102,6 +106,8 @@ class CallButton: UIView {
         titleLabel.text = style.title
         titleLabel.font = style.titleFont
         titleLabel.textColor = style.titleColor
+        accessibilityLabel = style.title
+        accessibilityHint = state == .active ? "Deactivates \(style.title)." : "Activates \(style.title)."
     }
 
     private func setIsEnabled(_ isEnabled: Bool) {

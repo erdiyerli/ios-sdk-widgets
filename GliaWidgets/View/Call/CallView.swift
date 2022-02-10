@@ -7,18 +7,36 @@ class CallView: EngagementView {
         case upgrading
     }
 
-    let operatorNameLabel = UILabel()
-    let durationLabel = UILabel()
+    let operatorNameLabel: UILabel = {
+        let label = UILabel()
+        label.accessibilityHint = "Displays operator name."
+        return label
+    }()
+    let durationLabel: UILabel = {
+        let label = UILabel()
+        label.accessibilityHint = "Displays call duration."
+        return label
+    }()
     let topLabel = UILabel()
     let bottomLabel = UILabel()
     let buttonBar: CallButtonBar
-    let localVideoView = VideoStreamView(.local)
-    let remoteVideoView = VideoStreamView(.remote)
+    let localVideoView: VideoStreamView = {
+        let streamView = VideoStreamView(.local)
+        streamView.accessibilityLabel = "Video"
+        streamView.accessibilityHint = "Displays visitor video stream."
+        return streamView
+    }()
+    let remoteVideoView: VideoStreamView = {
+        let streamView = VideoStreamView(.remote)
+        streamView.accessibilityLabel = "Video"
+        streamView.accessibilityHint = "Displays operator video stream."
+        return streamView
+    }()
     var callButtonTapped: ((CallButton.Kind) -> Void)?
 
     private let style: CallStyle
     private var mode: Mode = .audio
-    private let topView = UIView()
+    private let topView = UIView() // does not seem to be used
     private let topStackView = UIStackView()
     private var hideBarsWorkItem: DispatchWorkItem?
     private var headerTopConstraint: NSLayoutConstraint!
