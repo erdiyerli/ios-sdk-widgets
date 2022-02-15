@@ -180,6 +180,9 @@ class CallView: EngagementView {
         localVideoView.pan = { [weak self] in
             self?.adjustLocalVideoFrameAfterPanGesture(translation: $0)
         }
+
+        header.backButton.accessibilityLabel = "Back"
+        header.backButton.accessibilityHint = "Activates minimize."
     }
 
     private func layout() {

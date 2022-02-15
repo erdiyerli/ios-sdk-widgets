@@ -88,7 +88,12 @@ class ConnectOperatorView: UIView {
         animationView = nil
     }
 
-    private func setup() {}
+    private func setup() {
+        isAccessibilityElement = true
+        accessibilityTraits = .image
+        accessibilityLabel = "Avatar"
+        accessibilityHint = "Displays operator avatar."
+    }
 
     private func layout() {
         NSLayoutConstraint.autoSetPriority(.defaultHigh) {
