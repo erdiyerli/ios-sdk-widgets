@@ -22,14 +22,13 @@ class CallView: EngagementView {
     let buttonBar: CallButtonBar
     let localVideoView: VideoStreamView = {
         let streamView = VideoStreamView(.local)
-        streamView.accessibilityLabel = "Video"
-        streamView.accessibilityHint = "Displays visitor video stream."
+        streamView.accessibilityLabel = "Your Video"
         return streamView
     }()
     let remoteVideoView: VideoStreamView = {
         let streamView = VideoStreamView(.remote)
-        streamView.accessibilityLabel = "Video"
-        streamView.accessibilityHint = "Displays operator video stream."
+        // Consider to provide Operator name instead of generic 'Operator's'
+        streamView.accessibilityLabel = "Operator's Video"
         return streamView
     }()
     var callButtonTapped: ((CallButton.Kind) -> Void)?

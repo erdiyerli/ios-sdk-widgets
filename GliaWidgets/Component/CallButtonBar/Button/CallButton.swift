@@ -106,8 +106,8 @@ class CallButton: UIView {
         titleLabel.text = style.title
         titleLabel.font = style.titleFont
         titleLabel.textColor = style.titleColor
-        accessibilityLabel = style.title
-        accessibilityHint = state == .active ? "Deactivates \(style.title)." : "Activates \(style.title)."
+        accessibilityLabel = state == .active ? "Selected" : nil
+        accessibilityValue = style.title
     }
 
     private func setIsEnabled(_ isEnabled: Bool) {
