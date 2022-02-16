@@ -58,6 +58,7 @@ class CallButton: UIView {
             }
         }
         badgeView?.newItemCount = itemCount
+        updateAccessibilityProperties()
     }
 
     private func setup() {
@@ -66,6 +67,8 @@ class CallButton: UIView {
 
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
+        imageView.isAccessibilityElement = false
+        imageView.accessibilityElementsHidden = true
 
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
@@ -76,6 +79,7 @@ class CallButton: UIView {
 
         isAccessibilityElement = true
         accessibilityTraits = [.button]
+        accessibilityElements = []
 
         update(for: state)
 
@@ -106,15 +110,24 @@ class CallButton: UIView {
         titleLabel.text = style.title
         titleLabel.font = style.titleFont
         titleLabel.textColor = style.titleColor
-        accessibilityLabel = state == .active ? "Selected" : nil
-        accessibilityValue = style.title
+        updateAccessibilityProperties()
     }
 
     private func setIsEnabled(_ isEnabled: Bool) {
         isUserInteractionEnabled = isEnabled
         alpha = isEnabled ? 1.0 : 0.4
-        accessibilityElements = isEnabled ? nil : []
         isAccessibilityElement = isEnabled
+    }
+
+    private func updateAccessibilityProperties() {
+        let properties = Self.accessibility(
+            for: kind,
+            state: state,
+            style: style(for: state),
+            badgeItemCount: badgeView?.newItemCount
+        )
+        accessibilityValue = properties.value
+        accessibilityLabel = properties.label
     }
 
     private func style(for state: State) -> CallButtonStyle.StateStyle {
@@ -128,5 +141,37 @@ class CallButton: UIView {
 
     @objc private func tapped() {
         tap?()
+    }
+
+    static func accessibility(
+        for kind: Kind,
+        state: State,
+        style: CallButtonStyle.StateStyle,
+        badgeItemCount: Int?
+    ) -> (label: String?, value: String) {
+
+        let badgeValue: String
+        switch kind {
+        case .chat:
+            if let itemCount = badgeItemCount {
+                // TODO: provide proper localization/formatting for pluralized string
+                badgeValue = "\(itemCount) unread \(itemCount == 1 ? "message" : "messages")"
+            } else {
+                badgeValue = ""
+            }
+        case .video, .mute, .speaker, .minimize:
+            badgeValue = ""
+        }
+
+        let value: String
+
+        if style.title.isEmpty {
+            value = badgeValue
+        } else {
+            value = "\(style.title), \(badgeValue)"
+        }
+
+        return (state == .active ? "Selected" : nil, value)
+
     }
 }

@@ -44,8 +44,10 @@ class Header: UIView {
         self.style = style
         self.backButton = HeaderButton(with: style.backButton)
         self.closeButton = HeaderButton(with: style.closeButton)
+        self.closeButton.accessibilityLabel = "Close"
+        self.closeButton.accessibilityHint = "Leaves queue."
         self.endButton = ActionButton(with: style.endButton)
-        endButton.accessibilityHint = "Completes engagement."
+        self.endButton.accessibilityHint = "Completes engagement."
         self.endScreenShareButton = HeaderButton(with: style.endScreenShareButton)
         super.init(frame: .zero)
         self.titleLabel.accessibilityTraits = .header
