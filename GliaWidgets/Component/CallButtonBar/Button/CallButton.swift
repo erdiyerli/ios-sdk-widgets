@@ -113,6 +113,8 @@ class CallButton: UIView {
     private func setIsEnabled(_ isEnabled: Bool) {
         isUserInteractionEnabled = isEnabled
         alpha = isEnabled ? 1.0 : 0.4
+        accessibilityElements = isEnabled ? nil : []
+        isAccessibilityElement = isEnabled
     }
 
     private func style(for state: State) -> CallButtonStyle.StateStyle {
