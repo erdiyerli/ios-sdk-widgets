@@ -22,10 +22,11 @@ class ChatMessageView: UIView {
 
     func appendContent(_ content: ChatMessageContent, animated: Bool) {
         switch content {
-        case .text(let text):
+        case let .text(text, accProperties):
             let contentView = ChatTextContentView(with: style.text, contentAlignment: contentAlignment)
             contentView.text = text
             contentView.linkTapped = { [weak self] in self?.linkTapped?($0) }
+            contentView.accessibilityProperties = (label: accProperties.label, value: accProperties.value)
             appendContentView(contentView, animated: animated)
         case .files(let files):
             let contentViews = self.contentViews(for: files)

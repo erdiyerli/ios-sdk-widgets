@@ -99,7 +99,8 @@ class ChatMessageEntryView: UIView {
         textView.font = style.messageFont
         textView.textColor = style.messageColor
         textView.backgroundColor = .clear
-
+        textView.accessibilityLabel = "Message"
+ 
         placeholderLabel.font = style.placeholderFont
         placeholderLabel.textColor = style.placeholderColor
         updatePlaceholderText()

@@ -5,6 +5,18 @@ class ChatTextContentView: UIView {
         get { return textView.text }
         set { setText(newValue) }
     }
+
+    var accessibilityProperties: (label: String?, value: String?) {
+        get {
+            (contentView.accessibilityLabel, contentView.accessibilityValue)
+        }
+
+        set {
+            contentView.accessibilityLabel = newValue.label
+            contentView.accessibilityValue = newValue.value
+        }
+    }
+
     var linkTapped: ((URL) -> Void)?
 
     private let textView = UITextView()
@@ -45,6 +57,7 @@ class ChatTextContentView: UIView {
         textView.font = style.textFont
         textView.backgroundColor = .clear
         textView.textColor = style.textColor
+        textView.isAccessibilityElement = false
     }
 
     private func layout() {

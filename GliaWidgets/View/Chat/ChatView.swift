@@ -247,14 +247,14 @@ extension ChatView {
             return .queueOperator(connectView)
         case .outgoingMessage(let message):
             let view = VisitorChatMessageView(with: style.visitorMessage)
-            view.appendContent(.text(message.content), animated: false)
+            view.appendContent(.text(message.content, accessibility: Self.visitorAccessibilityOutgoingMessage(for: message)), animated: false)
             view.appendContent(.files(message.files), animated: false)
             view.fileTapped = { [weak self] in self?.fileTapped?($0) }
             view.linkTapped = { [weak self] in self?.linkTapped?($0) }
             return .outgoingMessage(view)
         case .visitorMessage(let message, let status):
             let view = VisitorChatMessageView(with: style.visitorMessage)
-            view.appendContent(.text(message.content), animated: false)
+            view.appendContent(.text(message.content, accessibility: Self.visitorAccessibilityMessage(for: message)), animated: false)
             view.appendContent(.downloads(message.downloads), animated: false)
             view.downloadTapped = { [weak self] in self?.downloadTapped?($0) }
             view.linkTapped = { [weak self] in self?.linkTapped?($0) }
@@ -269,7 +269,7 @@ extension ChatView {
                     gcd: environment.gcd
                 )
             )
-            view.appendContent(.text(message.content), animated: false)
+            view.appendContent(.text(message.content, accessibility: Self.operatorAccessibilityMessage(for: message)), animated: false)
             view.appendContent(.downloads(message.downloads), animated: false)
             view.downloadTapped = { [weak self] in self?.downloadTapped?($0) }
             view.linkTapped = { [weak self] in self?.linkTapped?($0) }
@@ -462,10 +462,18 @@ extension ChatView: UITableViewDelegate {
     }
 }
 
+// MARK: Accessibility
 extension ChatView {
-    struct Environment {
-        var data: FoundationBased.Data
-        var uuid: () -> UUID
-        var gcd: GCD
+    static func operatorAccessibilityMessage(for chatMessage: ChatMessage) -> ChatMessageContent.TextAccessibilityProperties {
+        .init(label: chatMessage.operator?.name ?? "Operator", value: chatMessage.content)
+    }
+
+    static func visitorAccessibilityMessage(for chatMessage: ChatMessage) -> ChatMessageContent.TextAccessibilityProperties {
+        .init(label: "You", value: chatMessage.content)
+    }
+
+    static func visitorAccessibilityOutgoingMessage(for outgoingMessage: OutgoingMessage) -> ChatMessageContent.TextAccessibilityProperties {
+        #warning("TODO: provide actual label and value for 'OutgoingMessage'")
+        return .init(label: "WIP", value: "WIP")
     }
 }
