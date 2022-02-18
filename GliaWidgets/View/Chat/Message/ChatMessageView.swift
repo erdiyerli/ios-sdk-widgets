@@ -26,7 +26,7 @@ class ChatMessageView: UIView {
             let contentView = ChatTextContentView(with: style.text, contentAlignment: contentAlignment)
             contentView.text = text
             contentView.linkTapped = { [weak self] in self?.linkTapped?($0) }
-            contentView.accessibilityProperties = (label: accProperties.label, value: accProperties.value)
+            contentView.accessibilityProperties = .init(label: accProperties.label, value: accProperties.value)
             appendContentView(contentView, animated: animated)
         case .files(let files):
             let contentViews = self.contentViews(for: files)

@@ -473,7 +473,6 @@ extension ChatView {
     }
 
     static func visitorAccessibilityOutgoingMessage(for outgoingMessage: OutgoingMessage) -> ChatMessageContent.TextAccessibilityProperties {
-        #warning("TODO: provide actual label and value for 'OutgoingMessage'")
-        return .init(label: "WIP", value: "WIP")
+        .init(label: "You", value: outgoingMessage.content)
     }
 }

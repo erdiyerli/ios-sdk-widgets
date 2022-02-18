@@ -33,6 +33,12 @@ class ChatFileDownloadContentView: ChatFileContentView {
         progressView.backgroundColor = style.progressBackgroundColor
         progressView.clipsToBounds = true
         progressView.layer.cornerRadius = 4
+
+        isAccessibilityElement = true
+        #warning("Provide proper accessibility label and placeholder")
+        accessibilityLabel = "Accessibility Label Placeholder"
+        accessibilityValue = "Accessibility Value Placeholder"
+        accessibilityElements = []
     }
 
     override func layout() {

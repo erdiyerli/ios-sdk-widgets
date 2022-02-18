@@ -6,14 +6,20 @@ class ChatTextContentView: UIView {
         set { setText(newValue) }
     }
 
-    var accessibilityProperties: (label: String?, value: String?) {
+    var accessibilityProperties: AccessibilityProperties {
         get {
-            (contentView.accessibilityLabel, contentView.accessibilityValue)
+            .init(
+                label: contentView.accessibilityLabel,
+                value: contentView.accessibilityValue
+            )
         }
 
         set {
             contentView.accessibilityLabel = newValue.label
             contentView.accessibilityValue = newValue.value
+            // Avoid reading empty messages.
+            // This is relevant to the case when file attachment is sent without message.
+            contentView.isAccessibilityElement = textView.superview != nil
         }
     }
 
@@ -101,5 +107,12 @@ extension ChatTextContentView: UITextViewDelegate {
             linkTapped?(URL)
             return false
         }
+    }
+}
+
+extension ChatTextContentView {
+    struct AccessibilityProperties {
+        var label: String?
+        var value: String?
     }
 }
