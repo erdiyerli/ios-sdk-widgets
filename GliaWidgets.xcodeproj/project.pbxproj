@@ -650,6 +650,8 @@
 			isa = PBXGroup;
 			children = (
 				1A5F494A25CA86CA003E3678 /* Call.swift */,
+				9AB196DB27C3FFCC00FD60AB /* Call.Environment.Interface.swift */,
+				9AB196DD27C3FFF400FD60AB /* Call.Environment.Mock.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1211,6 +1213,7 @@
 			isa = PBXGroup;
 			children = (
 				1A60AFDF25669A6100E53F53 /* ChatViewController.swift */,
+				9AB196E127C4045B00FD60AB /* ChatViewController.Mock.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1222,6 +1225,9 @@
 				1A54B83625A4722900C9393E /* Storage */,
 				1A5F8180258B4EF900A605DA /* Data */,
 				1A60AFD42566992A00E53F53 /* ChatViewModel.swift */,
+				9AB196DF27C401F600FD60AB /* ChatViewModel.Mock.swift */,
+				9AB196D527C3E1E400FD60AB /* ChatViewModel.Environment.Interface.swift */,
+				9AB196D727C3E27300FD60AB /* ChatViewModel.Environment.Mock.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1488,6 +1494,8 @@
 			isa = PBXGroup;
 			children = (
 				1AC7A74E2582571100567FF8 /* Interactor.swift */,
+				9AB196D127C3D74300FD60AB /* Interactor.Environment.Interface.swift */,
+				9AB196D327C3D7FD00FD60AB /* Interactor.Environment.Mock.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -1511,6 +1519,7 @@
 				1A5F495425CBE84A003E3678 /* SettingsAlertConfiguration.swift */,
 				C47901B225ED2F31007EE195 /* ScreenShareOfferAlertConfiguration.swift */,
 				6E60DD5727146DDB001422EF /* SingleActionAlertConfiguration.swift */,
+				9AB196D927C3FE3A00FD60AB /* AlertConfiguration.Mock.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -2034,12 +2043,14 @@
 				1A475BB325DE831F00296D55 /* BadgeView.swift in Sources */,
 				1A38A8A8258B652B0089DE7B /* OperatorChatMessageStyle.swift in Sources */,
 				1A7CA8212574D6760047CBBE /* ConnectOperatorView.swift in Sources */,
+				9AB196D427C3D7FD00FD60AB /* Interactor.Environment.Mock.swift in Sources */,
 				1A0C9A7925C16F9700815406 /* Theme+AlertConfiguration.swift in Sources */,
 				1AC8AADD25D419CE00DAFE50 /* VideoStreamView.swift in Sources */,
 				1A4AD3C7256E863900468BFB /* ThemeColor.swift in Sources */,
 				9A83D78327B18DF000681C9F /* Glia.Environment.Mock.swift in Sources */,
 				1A63B2F3257A3F3D00508478 /* AlertViewController.swift in Sources */,
 				C499A58426382FBE009962AC /* UnreadMessageIndicatorStyle.swift in Sources */,
+				9AB196DA27C3FE3A00FD60AB /* AlertConfiguration.Mock.swift in Sources */,
 				9A3E1D9727B6C7E9005634EB /* FoundationBased.Interface.swift in Sources */,
 				1A60B01D2567FCAD00E53F53 /* ButtonProperties.swift in Sources */,
 				1AC7A7482582237500567FF8 /* GliaViewController.swift in Sources */,
@@ -2059,6 +2070,7 @@
 				1A60AFCE2566958900E53F53 /* ViewFactory.swift in Sources */,
 				9A3E1D9927B6D0DB005634EB /* FoundationBased.Live.swift in Sources */,
 				1A7CA82F25751B5A0047CBBE /* ConnectOperatorStyle.swift in Sources */,
+				9AB196D227C3D74300FD60AB /* Interactor.Environment.Interface.swift in Sources */,
 				1A0452DD25DBD0A4000DA0C1 /* HeaderButton.swift in Sources */,
 				1A60AF96256675C400E53F53 /* UIColor+Extensions.swift in Sources */,
 				1A4674B625E907320078FA1C /* AttachmentSourceListStyle.swift in Sources */,
@@ -2091,6 +2103,7 @@
 				1A1E30CB25F9FDC400850E68 /* ChatImageFileContentStyle.swift in Sources */,
 				1A60AF93256674F900E53F53 /* Color.swift in Sources */,
 				1A38A8BA258B94D60089DE7B /* ImageView.swift in Sources */,
+				9AB196E227C4045B00FD60AB /* ChatViewController.Mock.swift in Sources */,
 				1A60B031256BF81500E53F53 /* VisitorChatMessageView.swift in Sources */,
 				1A5892B12608C68000E183CC /* QuickLookController.swift in Sources */,
 				9A66172727A94587001C8E03 /* CoreSDKClient.Interface.swift in Sources */,
@@ -2119,10 +2132,12 @@
 				1A7CA8242574D68E0047CBBE /* ConnectStatusView.swift in Sources */,
 				1A5F81402588B7BD00A605DA /* ChatMessageEntryStyle.swift in Sources */,
 				1A8B61D625C974D0000D780E /* ChatCallUpgradeStyle.swift in Sources */,
+				9AB196E027C401F600FD60AB /* ChatViewModel.Mock.swift in Sources */,
 				1A475BBC25DFA10100296D55 /* UnreadMessagesHandler.swift in Sources */,
 				1A60AF7A25656E0500E53F53 /* Theme.swift in Sources */,
 				1A475BB725DE833200296D55 /* BadgeStyle.swift in Sources */,
 				1A4AD3B3256D2A7600468BFB /* VisitorChatMessageStyle.swift in Sources */,
+				9AB196DC27C3FFCC00FD60AB /* Call.Environment.Interface.swift in Sources */,
 				C49A29EA2614A32600819269 /* ChatMessageContent.swift in Sources */,
 				1A60B0082567F29900E53F53 /* HeaderStyle.swift in Sources */,
 				1A4674BC25E91B930078FA1C /* PopoverPresenter.swift in Sources */,
@@ -2139,6 +2154,7 @@
 				1A6EBB0725ADB84200EE325D /* MediaUpgradeActionStyle.swift in Sources */,
 				C4F176CD261D1543009D9F07 /* ChatFileDownloadContentView.swift in Sources */,
 				1A4AD3CA256E864800468BFB /* ThemeColorStyle.swift in Sources */,
+				9AB196DE27C3FFF400FD60AB /* Call.Environment.Mock.swift in Sources */,
 				1A0C143125B8547200B00695 /* EngagementStyle.swift in Sources */,
 				1A7CA8272574D6F40047CBBE /* ConnectStyle.swift in Sources */,
 				1AC7A7552582594200567FF8 /* Configuration.swift in Sources */,
@@ -2179,6 +2195,7 @@
 				1AE15E49257A6BD200A642C0 /* ConfirmationAlertConfiguration.swift in Sources */,
 				C460C7782600BCF400449851 /* ChoiceCardOptionStyle.swift in Sources */,
 				C43D7A1125FF92680064B1DA /* ChoiceCardStyle.swift in Sources */,
+				9AB196D827C3E27300FD60AB /* ChatViewModel.Environment.Mock.swift in Sources */,
 				1A60AFB22566821B00E53F53 /* Asset.swift in Sources */,
 				1A1E309625F8CA4400850E68 /* FileDownload.swift in Sources */,
 				1A4AD3AF256D283700468BFB /* ChatMessageView.swift in Sources */,
@@ -2214,6 +2231,7 @@
 				1A60AFE825669C5000E53F53 /* ChatStyle.swift in Sources */,
 				1A4AF5C725AEEA42002CD0F4 /* Operator+Extensions.swift in Sources */,
 				1A4674C825ED084A0078FA1C /* MediaPickerViewModel.swift in Sources */,
+				9AB196D627C3E1E400FD60AB /* ChatViewModel.Environment.Interface.swift in Sources */,
 				1A0C9A8625C4090D00815406 /* CallButton.swift in Sources */,
 				9AB196EA27C5390100FD60AB /* ChatAttachment.Mock.swift in Sources */,
 				1AFB1E5E25F7ADDA00CA460D /* ChatOperator.swift in Sources */,
