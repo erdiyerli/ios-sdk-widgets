@@ -210,6 +210,18 @@
 		9A83D77F27B181C500681C9F /* Glia.Environment.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83D77E27B181C500681C9F /* Glia.Environment.Interface.swift */; };
 		9A83D78127B18DB600681C9F /* Glia.Environment.Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83D78027B18DB600681C9F /* Glia.Environment.Live.swift */; };
 		9A83D78327B18DF000681C9F /* Glia.Environment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83D78227B18DF000681C9F /* Glia.Environment.Mock.swift */; };
+		9AB196D227C3D74300FD60AB /* Interactor.Environment.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196D127C3D74300FD60AB /* Interactor.Environment.Interface.swift */; };
+		9AB196D427C3D7FD00FD60AB /* Interactor.Environment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196D327C3D7FD00FD60AB /* Interactor.Environment.Mock.swift */; };
+		9AB196D627C3E1E400FD60AB /* ChatViewModel.Environment.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196D527C3E1E400FD60AB /* ChatViewModel.Environment.Interface.swift */; };
+		9AB196D827C3E27300FD60AB /* ChatViewModel.Environment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196D727C3E27300FD60AB /* ChatViewModel.Environment.Mock.swift */; };
+		9AB196DA27C3FE3A00FD60AB /* AlertConfiguration.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196D927C3FE3A00FD60AB /* AlertConfiguration.Mock.swift */; };
+		9AB196DC27C3FFCC00FD60AB /* Call.Environment.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DB27C3FFCC00FD60AB /* Call.Environment.Interface.swift */; };
+		9AB196DE27C3FFF400FD60AB /* Call.Environment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DD27C3FFF400FD60AB /* Call.Environment.Mock.swift */; };
+		9AB196E027C401F600FD60AB /* ChatViewModel.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DF27C401F600FD60AB /* ChatViewModel.Mock.swift */; };
+		9AB196E227C4045B00FD60AB /* ChatViewController.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E127C4045B00FD60AB /* ChatViewController.Mock.swift */; };
+		9AB196E627C510DA00FD60AB /* ChatMessage.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E527C510DA00FD60AB /* ChatMessage.Mock.swift */; };
+		9AB196E827C51F7D00FD60AB /* ChatOperator.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E727C51F7D00FD60AB /* ChatOperator.Mock.swift */; };
+		9AB196EA27C5390100FD60AB /* ChatAttachment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E927C5390100FD60AB /* ChatAttachment.Mock.swift */; };
 		9AB196EC27C64A3000FD60AB /* GCD.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196EB27C64A3000FD60AB /* GCD.Interface.swift */; };
 		9AB196EE27C64C4000FD60AB /* GCD.Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196ED27C64C4000FD60AB /* GCD.Live.swift */; };
 		9AB196F027C64EFA00FD60AB /* GCD.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196EF27C64EFA00FD60AB /* GCD.Mock.swift */; };
@@ -492,6 +504,18 @@
 		9A83D77E27B181C500681C9F /* Glia.Environment.Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glia.Environment.Interface.swift; sourceTree = "<group>"; };
 		9A83D78027B18DB600681C9F /* Glia.Environment.Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glia.Environment.Live.swift; sourceTree = "<group>"; };
 		9A83D78227B18DF000681C9F /* Glia.Environment.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glia.Environment.Mock.swift; sourceTree = "<group>"; };
+		9AB196D127C3D74300FD60AB /* Interactor.Environment.Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.Environment.Interface.swift; sourceTree = "<group>"; };
+		9AB196D327C3D7FD00FD60AB /* Interactor.Environment.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.Environment.Mock.swift; sourceTree = "<group>"; };
+		9AB196D527C3E1E400FD60AB /* ChatViewModel.Environment.Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.Environment.Interface.swift; sourceTree = "<group>"; };
+		9AB196D727C3E27300FD60AB /* ChatViewModel.Environment.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.Environment.Mock.swift; sourceTree = "<group>"; };
+		9AB196D927C3FE3A00FD60AB /* AlertConfiguration.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfiguration.Mock.swift; sourceTree = "<group>"; };
+		9AB196DB27C3FFCC00FD60AB /* Call.Environment.Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.Environment.Interface.swift; sourceTree = "<group>"; };
+		9AB196DD27C3FFF400FD60AB /* Call.Environment.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.Environment.Mock.swift; sourceTree = "<group>"; };
+		9AB196DF27C401F600FD60AB /* ChatViewModel.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.Mock.swift; sourceTree = "<group>"; };
+		9AB196E127C4045B00FD60AB /* ChatViewController.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.Mock.swift; sourceTree = "<group>"; };
+		9AB196E527C510DA00FD60AB /* ChatMessage.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.Mock.swift; sourceTree = "<group>"; };
+		9AB196E727C51F7D00FD60AB /* ChatOperator.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOperator.Mock.swift; sourceTree = "<group>"; };
+		9AB196E927C5390100FD60AB /* ChatAttachment.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAttachment.Mock.swift; sourceTree = "<group>"; };
 		9AB196EB27C64A3000FD60AB /* GCD.Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Interface.swift; sourceTree = "<group>"; };
 		9AB196ED27C64C4000FD60AB /* GCD.Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Live.swift; sourceTree = "<group>"; };
 		9AB196EF27C64EFA00FD60AB /* GCD.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Mock.swift; sourceTree = "<group>"; };
@@ -976,8 +1000,11 @@
 				9A3E1D9327B6C29C005634EB /* ChatEngagementFile.Mock.swift */,
 				1AC7A77A25838AE800567FF8 /* ChatItem.swift */,
 				1AFB1E5D25F7ADDA00CA460D /* ChatOperator.swift */,
+				9AB196E727C51F7D00FD60AB /* ChatOperator.Mock.swift */,
 				1AFB1E6725F7AE3C00CA460D /* ChatAttachment.swift */,
+				9AB196E927C5390100FD60AB /* ChatAttachment.Mock.swift */,
 				1A6EB05625A717CB0007081A /* ChatMessage.swift */,
+				9AB196E527C510DA00FD60AB /* ChatMessage.Mock.swift */,
 				1A5F8181258B4F0E00A605DA /* OutgoingMessage.swift */,
 				C49A29F12614A85E00819269 /* ChoiceCard.swift */,
 				C43D7A1425FF9A590064B1DA /* ChatChoiceCardOption.swift */,
@@ -1985,6 +2012,7 @@
 				6E9C01AF26D3BE2300EBE1D4 /* OperatorTypingIndicatorStyle.swift in Sources */,
 				1A60AFD925669A1500E53F53 /* View.swift in Sources */,
 				1A6EBB0325ADB82000EE325D /* MediaUpgradeActionView.swift in Sources */,
+				9AB196E627C510DA00FD60AB /* ChatMessage.Mock.swift in Sources */,
 				1A0EDF8225E8E0150076D1AD /* PopoverViewController.swift in Sources */,
 				1A60AFBC256682C800E53F53 /* SubFlowCoordinator.swift in Sources */,
 				1A0C9A8C25C4092400815406 /* CallButtonStyle.swift in Sources */,
@@ -2156,6 +2184,7 @@
 				1A60AF90256674F000E53F53 /* Font.swift in Sources */,
 				1A4674C225E92A710078FA1C /* AtttachmentSourceItemKind.swift in Sources */,
 				1A4674AC25E905D00078FA1C /* AttachmentSourceItemView.swift in Sources */,
+				9AB196E827C51F7D00FD60AB /* ChatOperator.Mock.swift in Sources */,
 				1A0C9A9725C41D4D00815406 /* CallButtonBarStyle.swift in Sources */,
 				1AA738BC25790DBE00E1120F /* AlertStyle.swift in Sources */,
 				1A60B04A256C0E0100E53F53 /* ChatItemCell.swift in Sources */,
@@ -2176,6 +2205,7 @@
 				1A4AF5C725AEEA42002CD0F4 /* Operator+Extensions.swift in Sources */,
 				1A4674C825ED084A0078FA1C /* MediaPickerViewModel.swift in Sources */,
 				1A0C9A8625C4090D00815406 /* CallButton.swift in Sources */,
+				9AB196EA27C5390100FD60AB /* ChatAttachment.Mock.swift in Sources */,
 				1AFB1E5E25F7ADDA00CA460D /* ChatOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

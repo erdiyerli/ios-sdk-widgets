@@ -32,6 +32,14 @@ extension Foundation.Data {
 
 extension UUID {
     static let mock = Self(uuidString: "deadbeef-dead-beef-dead-beefdeadbeef").unsafelyUnwrapped
+
+    static var incrementing: () -> UUID {
+        var uuid = 0
+        return {
+            defer { uuid += 1 }
+            return Self(uuidString: "00000000-0000-0000-0000-\(String(format: "%012x", uuid))")!
+        }
+    }
 }
 
 extension URL {

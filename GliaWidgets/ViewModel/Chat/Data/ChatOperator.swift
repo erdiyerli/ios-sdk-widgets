@@ -13,4 +13,11 @@ class ChatOperator: Codable {
         name = salemoveOperator.name
         pictureUrl = salemoveOperator.picture?.url
     }
+
+    #if DEBUG
+    init(name: String, pictureUrl: String?) {
+        self.name = name
+        self.pictureUrl = pictureUrl
+    }
+    #endif
 }
