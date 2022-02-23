@@ -9,11 +9,18 @@ class ChatFileContentView: UIView {
     private let style: ChatFileContentStyle
     private let content: Content
     private let tap: () -> Void
+    private let accessibilityProperties: ChatFileContentView.AccessibilityProperties
 
-    init(with style: ChatFileContentStyle, content: Content, tap: @escaping () -> Void) {
+    init(
+        with style: ChatFileContentStyle,
+        content: Content,
+        accessibilityProperties: ChatFileContentView.AccessibilityProperties,
+        tap: @escaping () -> Void
+    ) {
         self.style = style
         self.content = content
         self.tap = tap
+        self.accessibilityProperties = accessibilityProperties
         super.init(frame: .zero)
         setup()
         layout()
@@ -40,11 +47,38 @@ class ChatFileContentView: UIView {
         let tapRecognizer = UITapGestureRecognizer(target: self,
                                                    action: #selector(tapped))
         addGestureRecognizer(tapRecognizer)
+
+        let owner: String
+
+        switch accessibilityProperties.from {
+        case let .operator(operatorName):
+            owner = operatorName
+        case .visitor:
+            owner = "You"
+        }
+        isAccessibilityElement = true
+        accessibilityElements = []
+        accessibilityLabel = "Attachment from \(owner)"
+        #warning("Provide proper accessible file name")
+        accessibilityValue = "Attachment Placeholder"
     }
 
     func layout() {}
 
     @objc private func tapped() {
         tap()
+    }
+}
+
+extension ChatFileContentView {
+    struct AccessibilityProperties {
+        var from: From
+    }
+}
+
+extension ChatFileContentView.AccessibilityProperties {
+    enum From {
+        case `operator`(String)
+        case visitor
     }
 }

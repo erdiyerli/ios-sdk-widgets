@@ -2,8 +2,8 @@ import UIKit
 
 enum ChatMessageContent {
     case text(String, accessibility: TextAccessibilityProperties)
-    case files([LocalFile])
-    case downloads([FileDownload])
+    case files([LocalFile], accessibility: ChatFileContentView.AccessibilityProperties)
+    case downloads([FileDownload], accessibility: ChatFileContentView.AccessibilityProperties)
     case choiceCard(ChoiceCard)
 
     struct TextAccessibilityProperties {

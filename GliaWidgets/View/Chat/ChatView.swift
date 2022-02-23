@@ -248,14 +248,21 @@ extension ChatView {
         case .outgoingMessage(let message):
             let view = VisitorChatMessageView(with: style.visitorMessage)
             view.appendContent(.text(message.content, accessibility: Self.visitorAccessibilityOutgoingMessage(for: message)), animated: false)
-            view.appendContent(.files(message.files), animated: false)
+            view.appendContent(
+                .files(
+                    message.files,
+                    accessibility: .init(from: .visitor)
+                ),
+                animated: false
+            )
             view.fileTapped = { [weak self] in self?.fileTapped?($0) }
             view.linkTapped = { [weak self] in self?.linkTapped?($0) }
             return .outgoingMessage(view)
         case .visitorMessage(let message, let status):
             let view = VisitorChatMessageView(with: style.visitorMessage)
             view.appendContent(.text(message.content, accessibility: Self.visitorAccessibilityMessage(for: message)), animated: false)
-            view.appendContent(.downloads(message.downloads), animated: false)
+            view.appendContent(.downloads(message.downloads,
+                                          accessibility: .init(from: .visitor)), animated: false)
             view.downloadTapped = { [weak self] in self?.downloadTapped?($0) }
             view.linkTapped = { [weak self] in self?.linkTapped?($0) }
             view.status = status
@@ -270,7 +277,14 @@ extension ChatView {
                 )
             )
             view.appendContent(.text(message.content, accessibility: Self.operatorAccessibilityMessage(for: message)), animated: false)
-            view.appendContent(.downloads(message.downloads), animated: false)
+#warning("Provide proper localized 'Operator'")
+            view.appendContent(
+                .downloads(
+                    message.downloads,
+
+                    accessibility: .init(from: .operator(message.operator?.name ?? "Operator"))),
+                animated: false
+            )
             view.downloadTapped = { [weak self] in self?.downloadTapped?($0) }
             view.linkTapped = { [weak self] in self?.linkTapped?($0) }
             view.showsOperatorImage = showsImage

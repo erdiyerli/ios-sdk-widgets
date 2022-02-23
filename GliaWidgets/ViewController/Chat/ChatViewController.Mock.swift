@@ -9,10 +9,19 @@ extension ChatViewController {
         )
     }
 
-    // MARK: - Empty Screen State
+    // MARK: - Empty State
     static func mockEmptyScreen() -> ChatViewController {
         var chatViewModelEnv = ChatViewModel.Environment.mock
         chatViewModelEnv.fileManager.urlsForDirectoryInDomainMask = { _, _ in [.mock] }
+        let chatViewModel = ChatViewModel.mock(environment: chatViewModelEnv)
+        return .mock(chatViewModel: chatViewModel)
+    }
+
+    // MARK: - Enqueue State
+    static func mockEnqueueScreen() -> ChatViewController {
+        var chatViewModelEnv = ChatViewModel.Environment.mock
+        chatViewModelEnv.fileManager.urlsForDirectoryInDomainMask = { _, _ in [.mock] }
+        chatViewModelEnv.chatStorage.isEmpty = { true }
         let chatViewModel = ChatViewModel.mock(environment: chatViewModelEnv)
         return .mock(chatViewModel: chatViewModel)
     }
@@ -124,6 +133,7 @@ extension ChatViewController {
             ]
         }
         let chatViewModel = ChatViewModel.mock(environment: chatViewModelEnv)
+        
         return .mock(chatViewModel: chatViewModel)
     }
 }

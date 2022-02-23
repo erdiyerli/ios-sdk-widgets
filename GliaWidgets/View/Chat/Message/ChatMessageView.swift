@@ -28,11 +28,17 @@ class ChatMessageView: UIView {
             contentView.linkTapped = { [weak self] in self?.linkTapped?($0) }
             contentView.accessibilityProperties = .init(label: accProperties.label, value: accProperties.value)
             appendContentView(contentView, animated: animated)
-        case .files(let files):
-            let contentViews = self.contentViews(for: files)
+        case let .files(files, accProperties):
+            let contentViews = self.contentViews(
+                for: files,
+                accessibilityProperties: accProperties
+            )
             appendContentViews(contentViews, animated: animated)
-        case .downloads(let downloads):
-            let contentViews = self.contentViews(for: downloads)
+        case let .downloads(downloads, accProperties):
+            let contentViews = self.contentViews(
+                for: downloads,
+                accessibilityProperties: accProperties
+            )
             appendContentViews(contentViews, animated: animated)
         default:
             break
@@ -69,38 +75,48 @@ class ChatMessageView: UIView {
         contentViews.accessibilityElements = []
     }
 
-    private func contentViews(for files: [LocalFile]) -> [ChatFileContentView] {
+    private func contentViews(
+        for files: [LocalFile],
+        accessibilityProperties: ChatFileContentView.AccessibilityProperties
+    ) -> [ChatFileContentView] {
         return files.compactMap { file in
             if file.isImage {
                 return ChatImageFileContentView(
                     with: style.imageFile,
                     content: .localFile(file),
                     contentAlignment: contentAlignment,
+                    accessibilityProperties: accessibilityProperties,
                     tap: { [weak self] in self?.fileTapped?(file) }
                 )
             } else {
                 return ChatFileDownloadContentView(
                     with: style.fileDownload,
                     content: .localFile(file),
+                    accessibilityProperties: accessibilityProperties,
                     tap: { [weak self] in self?.fileTapped?(file) }
                 )
             }
         }
     }
 
-    private func contentViews(for downloads: [FileDownload]) -> [ChatFileContentView] {
+    private func contentViews(
+        for downloads: [FileDownload],
+        accessibilityProperties: ChatFileContentView.AccessibilityProperties
+    ) -> [ChatFileContentView] {
         return downloads.compactMap { download in
             if download.file.isImage {
                 return ChatImageFileContentView(
                     with: style.imageFile,
                     content: .download(download),
                     contentAlignment: contentAlignment,
+                    accessibilityProperties: accessibilityProperties,
                     tap: { [weak self] in self?.downloadTapped?(download) }
                 )
             } else {
                 return ChatFileDownloadContentView(
                     with: style.fileDownload,
                     content: .download(download),
+                    accessibilityProperties: accessibilityProperties,
                     tap: { [weak self] in self?.downloadTapped?(download) }
                 )
             }
