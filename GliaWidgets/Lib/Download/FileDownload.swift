@@ -88,3 +88,13 @@ class FileDownload {
         )
     }
 }
+
+extension FileDownload {
+    struct AccessibilityProperties {
+        var value: String?
+    }
+
+    var accessibilityProperties: AccessibilityProperties {
+        .init(value: file.fileInfoString)
+    }
+}

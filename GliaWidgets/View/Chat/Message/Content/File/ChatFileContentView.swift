@@ -34,10 +34,14 @@ class ChatFileContentView: UIView {
     func update(with download: FileDownload) {}
 
     func setup() {
+        let fileValue: String?
+
         switch content {
         case .localFile(let file):
+            fileValue = file.accessibilityProperties.value
             update(with: file)
         case .download(let download):
+            fileValue = download.accessibilityProperties.value
             update(with: download)
             download.state.addObserver(self) { [weak self] _, _ in
                 self?.update(with: download)
@@ -59,8 +63,7 @@ class ChatFileContentView: UIView {
         isAccessibilityElement = true
         accessibilityElements = []
         accessibilityLabel = "Attachment from \(owner)"
-        #warning("Provide proper accessible file name")
-        accessibilityValue = "Attachment Placeholder"
+        accessibilityValue = fileValue
     }
 
     func layout() {}

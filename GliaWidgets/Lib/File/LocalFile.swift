@@ -76,3 +76,13 @@ extension LocalFile: Equatable {
         return lhs.url == rhs.url
     }
 }
+
+extension LocalFile {
+    struct AccessibilityProperties {
+        var value: String?
+    }
+
+    var accessibilityProperties: AccessibilityProperties {
+        return .init(value: fileInfoString)
+    }
+}
