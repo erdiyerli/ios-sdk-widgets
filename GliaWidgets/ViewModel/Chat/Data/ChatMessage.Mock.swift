@@ -20,5 +20,4 @@ extension ChatMessage {
         )
     }
 }
-
 #endif
