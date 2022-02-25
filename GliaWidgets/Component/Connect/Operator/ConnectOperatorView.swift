@@ -92,7 +92,7 @@ class ConnectOperatorView: UIView {
         isAccessibilityElement = true
         accessibilityTraits = .image
         accessibilityLabel = "Avatar"
-        accessibilityHint = "Displays operator avatar."
+        accessibilityHint = "Displays operator avatar or placeholder."
     }
 
     private func layout() {

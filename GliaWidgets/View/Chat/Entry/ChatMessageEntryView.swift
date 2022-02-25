@@ -106,9 +106,11 @@ class ChatMessageEntryView: UIView {
         updatePlaceholderText()
 
         pickMediaButton.tap = { [weak self] in self?.pickMediaTapped?() }
+        pickMediaButton.accessibilityLabel = "Pick media"
         updatePickMediaButtonVisibility()
 
         sendButton.tap = { [weak self] in self?.sendTap() }
+        sendButton.accessibilityLabel = "Send"
         showsSendButton = false
 
         buttonsStackView.axis = .horizontal

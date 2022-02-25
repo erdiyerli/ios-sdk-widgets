@@ -111,6 +111,7 @@ class ConnectView: UIView {
 
     private func setup() {
         setState(.none, animated: false)
+        accessibilityElements = [operatorView, statusView]
     }
 
     private func layout() {
