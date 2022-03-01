@@ -47,4 +47,15 @@ extension SnapshotTestCase {
             fatalError("Tests must be run on a device that has Dynamic Type disabled")
         }
     }
+
+    func nameForDevice(baseName: String? = nil) -> String {
+        let size = UIScreen.main.bounds.size
+        let scale = UIScreen.main.scale
+        let version = UIDevice.current.systemVersion
+        let deviceName = "\(Int(size.width))x\(Int(size.height))-\(version)-\(Int(scale))x"
+
+        return [baseName, deviceName]
+            .compactMap { $0 }
+            .joined(separator: "-")
+    }
 }

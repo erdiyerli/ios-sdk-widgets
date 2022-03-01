@@ -1,18 +1,16 @@
-import Foundation
 #if DEBUG
+import Foundation
+import UIKit
+
 // swiftlint:disable function_body_length
 extension ChatViewController {
-    static func mock(chatViewModel: ChatViewModel = .mock()) -> ChatViewController {
+    static func mock(
+        chatViewModel: ChatViewModel = .mock(),
+        viewFactory: ViewFactory = .mock()
+    ) -> ChatViewController {
         ChatViewController(
             viewModel: chatViewModel,
-            viewFactory: .init(
-                with: Theme(),
-                environment: .init(
-                    data: .mock,
-                    uuid: { .mock },
-                    gcd: .mock
-                )
-            )
+            viewFactory: viewFactory
         )
     }
 
@@ -56,7 +54,7 @@ extension ChatViewController {
                 .mock(
                     id: messageId(),
                     queueID: queueId,
-                    operator: .mock(name: "John Smith", pictureUrl: nil),
+                    operator: .mock(name: "John Smith", pictureUrl: URL.mock.absoluteString),
                     sender: .operator,
                     content: "hello",
                     attachment: nil,
@@ -140,8 +138,10 @@ extension ChatViewController {
             ]
         }
         let chatViewModel = ChatViewModel.mock(environment: chatViewModelEnv)
-        
-        return .mock(chatViewModel: chatViewModel)
+        var factoryEnv = ViewFactory.Environment.mock
+        factoryEnv.data.dataWithContentsOfFileUrl = { _ in UIImage.mock.pngData()! }
+        let viewFactory = ViewFactory.mock(environment: factoryEnv)
+        return .mock(chatViewModel: chatViewModel, viewFactory: viewFactory)
     }
 }
 // swiftlint:enable function_body_length
