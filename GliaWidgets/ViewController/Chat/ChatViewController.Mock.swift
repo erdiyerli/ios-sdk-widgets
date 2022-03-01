@@ -5,7 +5,14 @@ extension ChatViewController {
     static func mock(chatViewModel: ChatViewModel = .mock()) -> ChatViewController {
         ChatViewController(
             viewModel: chatViewModel,
-            viewFactory: .init(with: Theme())
+            viewFactory: .init(
+                with: Theme(),
+                environment: .init(
+                    data: .mock,
+                    uuid: { .mock },
+                    gcd: .mock
+                )
+            )
         )
     }
 
