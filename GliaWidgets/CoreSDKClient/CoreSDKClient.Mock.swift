@@ -56,6 +56,7 @@ extension CoreSdkClient.EngagementFile {
 }
 
 extension CoreSdkClient.Salemove.Configuration {
+    // swiftlint:disable force_try
     static func mock() -> Self {
         try! .init(
             siteId: "mockSiteId",
@@ -63,6 +64,7 @@ extension CoreSdkClient.Salemove.Configuration {
             authorizingMethod: .mock
         )
     }
+    // swiftlint:enable force_try
 }
 
 extension CoreSdkClient.Salemove.AuthorizationMethod {

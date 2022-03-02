@@ -1,6 +1,6 @@
 #if DEBUG
 extension ChatViewModel {
-    static func mock(environment: ChatViewModel.Environment = .mock) -> ChatViewModel {
+    static func mock(environment: Environment = .mock) -> ChatViewModel {
         ChatViewModel(
             interactor: Interactor(
                 with: .mock(),

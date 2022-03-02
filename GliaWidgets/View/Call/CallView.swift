@@ -1,5 +1,6 @@
 import UIKit
 
+// swiftlint:disable type_body_length
 class CallView: EngagementView {
     enum Mode {
         case audio
@@ -299,6 +300,7 @@ class CallView: EngagementView {
         }
     }
 }
+// swiftlint:enable type_body_length
 
 // MARK: Local Video
 

@@ -3,4 +3,3 @@ extension Interactor {
         var coreSdk: CoreSdkClient
     }
 }
-

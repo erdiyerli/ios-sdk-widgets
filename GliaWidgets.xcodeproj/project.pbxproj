@@ -193,6 +193,7 @@
 		7512A57D27BFA37D00319DF1 /* CoreSdkClient.Salemove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512A57C27BFA37D00319DF1 /* CoreSdkClient.Salemove.swift */; };
 		7512A57F27BFA39700319DF1 /* GliaWidgets.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512A57E27BFA39700319DF1 /* GliaWidgets.Mock.swift */; };
 		7512A5A727C3926500319DF1 /* GliaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512A5A627C3926500319DF1 /* GliaTests.swift */; };
+		753A56B927CFEB730050D8E6 /* ChatViewModel.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DF27C401F600FD60AB /* ChatViewModel.Mock.swift */; };
 		756087E127837EC000158604 /* BundleManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756087E027837EC000158604 /* BundleManaging.swift */; };
 		9A3E1D8427B67F1B005634EB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E1D8327B67F1B005634EB /* Helper.swift */; };
 		9A3E1D8A27B6B824005634EB /* FileDownload.Environment.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E1D8927B6B824005634EB /* FileDownload.Environment.Interface.swift */; };
@@ -217,15 +218,10 @@
 		9AB196DA27C3FE3A00FD60AB /* AlertConfiguration.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196D927C3FE3A00FD60AB /* AlertConfiguration.Mock.swift */; };
 		9AB196DC27C3FFCC00FD60AB /* Call.Environment.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DB27C3FFCC00FD60AB /* Call.Environment.Interface.swift */; };
 		9AB196DE27C3FFF400FD60AB /* Call.Environment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DD27C3FFF400FD60AB /* Call.Environment.Mock.swift */; };
-		9AB196E027C401F600FD60AB /* ChatViewModel.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196DF27C401F600FD60AB /* ChatViewModel.Mock.swift */; };
 		9AB196E227C4045B00FD60AB /* ChatViewController.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E127C4045B00FD60AB /* ChatViewController.Mock.swift */; };
 		9AB196E627C510DA00FD60AB /* ChatMessage.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E527C510DA00FD60AB /* ChatMessage.Mock.swift */; };
 		9AB196E827C51F7D00FD60AB /* ChatOperator.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E727C51F7D00FD60AB /* ChatOperator.Mock.swift */; };
 		9AB196EA27C5390100FD60AB /* ChatAttachment.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196E927C5390100FD60AB /* ChatAttachment.Mock.swift */; };
-		9AB196EC27C64A3000FD60AB /* GCD.Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196EB27C64A3000FD60AB /* GCD.Interface.swift */; };
-		9AB196EE27C64C4000FD60AB /* GCD.Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196ED27C64C4000FD60AB /* GCD.Live.swift */; };
-		9AB196F027C64EFA00FD60AB /* GCD.Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196EF27C64EFA00FD60AB /* GCD.Mock.swift */; };
-		9AB196F227C67B6900FD60AB /* GCD.Failing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB196F127C67B6900FD60AB /* GCD.Failing.swift */; };
 		9ACC25D227B4727500BC5335 /* CoreSDKClient.Failing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC25D127B4727500BC5335 /* CoreSDKClient.Failing.swift */; };
 		9ACC25D427B474E800BC5335 /* Glia.Environment.Failing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC25D327B474E800BC5335 /* Glia.Environment.Failing.swift */; };
 		C4119E04268F411D004DFEFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4119E03268F411D004DFEFB /* SceneDelegate.swift */; };
@@ -516,10 +512,6 @@
 		9AB196E527C510DA00FD60AB /* ChatMessage.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.Mock.swift; sourceTree = "<group>"; };
 		9AB196E727C51F7D00FD60AB /* ChatOperator.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOperator.Mock.swift; sourceTree = "<group>"; };
 		9AB196E927C5390100FD60AB /* ChatAttachment.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAttachment.Mock.swift; sourceTree = "<group>"; };
-		9AB196EB27C64A3000FD60AB /* GCD.Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Interface.swift; sourceTree = "<group>"; };
-		9AB196ED27C64C4000FD60AB /* GCD.Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Live.swift; sourceTree = "<group>"; };
-		9AB196EF27C64EFA00FD60AB /* GCD.Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Mock.swift; sourceTree = "<group>"; };
-		9AB196F127C67B6900FD60AB /* GCD.Failing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCD.Failing.swift; sourceTree = "<group>"; };
 		9ACC25D127B4727500BC5335 /* CoreSDKClient.Failing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSDKClient.Failing.swift; sourceTree = "<group>"; };
 		9ACC25D327B474E800BC5335 /* Glia.Environment.Failing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glia.Environment.Failing.swift; sourceTree = "<group>"; };
 		9B8252BE9AE93B4EA9A50E55 /* Pods-TestingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingApp.release.xcconfig"; path = "Target Support Files/Pods-TestingApp/Pods-TestingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -2057,6 +2049,7 @@
 				1A4AF5D325AEF543002CD0F4 /* AlertViewController+Confirmation.swift in Sources */,
 				1AFB1E7825F8B26800CA460D /* ChatTextContentStyle.swift in Sources */,
 				1AFB1E7425F8B00B00CA460D /* ChatTextContentView.swift in Sources */,
+				753A56B927CFEB730050D8E6 /* ChatViewModel.Mock.swift in Sources */,
 				1A0C9A7F25C1732F00815406 /* Theme+MinimizedBubble.swift in Sources */,
 				1A60AF7E25656F0400E53F53 /* Glia.swift in Sources */,
 				1A60AFB62566825400E53F53 /* ViewModel.swift in Sources */,
@@ -2132,7 +2125,6 @@
 				1A7CA8242574D68E0047CBBE /* ConnectStatusView.swift in Sources */,
 				1A5F81402588B7BD00A605DA /* ChatMessageEntryStyle.swift in Sources */,
 				1A8B61D625C974D0000D780E /* ChatCallUpgradeStyle.swift in Sources */,
-				9AB196E027C401F600FD60AB /* ChatViewModel.Mock.swift in Sources */,
 				1A475BBC25DFA10100296D55 /* UnreadMessagesHandler.swift in Sources */,
 				1A60AF7A25656E0500E53F53 /* Theme.swift in Sources */,
 				1A475BB725DE833200296D55 /* BadgeStyle.swift in Sources */,

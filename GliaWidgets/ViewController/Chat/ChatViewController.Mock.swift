@@ -139,7 +139,7 @@ extension ChatViewController {
         }
         let chatViewModel = ChatViewModel.mock(environment: chatViewModelEnv)
         var factoryEnv = ViewFactory.Environment.mock
-        factoryEnv.data.dataWithContentsOfFileUrl = { _ in UIImage.mock.pngData()! }
+        factoryEnv.data.dataWithContentsOfFileUrl = { _ in UIImage.mock.pngData() ?? Data() }
         let viewFactory = ViewFactory.mock(environment: factoryEnv)
         return .mock(chatViewModel: chatViewModel, viewFactory: viewFactory)
     }

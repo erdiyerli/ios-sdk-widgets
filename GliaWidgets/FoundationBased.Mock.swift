@@ -33,6 +33,7 @@ extension Foundation.Data {
 extension UUID {
     static let mock = Self(uuidString: "deadbeef-dead-beef-dead-beefdeadbeef").unsafelyUnwrapped
 
+    // swiftlint:disable force_unwrapping
     static var incrementing: () -> UUID {
         var uuid = 0
         return {
@@ -40,6 +41,7 @@ extension UUID {
             return Self(uuidString: "00000000-0000-0000-0000-\(String(format: "%012x", uuid))")!
         }
     }
+    // swiftlint:enable force_unwrapping
 }
 
 extension URL {
