@@ -1,3 +1,4 @@
+#if DEBUG
 extension ViewFactory.Environment {
     static let mock = Self(
         data: .mock,
@@ -5,3 +6,4 @@ extension ViewFactory.Environment {
         gcd: .mock
     )
 }
+#endif
