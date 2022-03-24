@@ -62,6 +62,13 @@ let package = Package(
                 .process("Resources")
             ]
         ),
+        .testTarget(
+            name: "SnapshotTests",
+            path: "SnapshotTests",
+            exclude: [
+                "__Snapshots__"
+            ]
+        ),
         .binaryTarget(
             name: "PureLayout",
             url: "https://github.com/salemove/ios-sdk-widgets/releases/download/0.1.0/PureLayout.xcframework.zip",
