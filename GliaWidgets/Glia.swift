@@ -187,7 +187,7 @@ public class Glia {
         engagementKind: EngagementKind,
         features: Features
     ) {
-        rootCoordinator = RootCoordinator(
+        rootCoordinator = self.environment.rootCoordinator(
             interactor: interactor,
             viewFactory: viewFactory,
             sceneProvider: sceneProvider,

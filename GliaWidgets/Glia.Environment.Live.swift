@@ -21,7 +21,8 @@ extension Glia.Environment {
         createFileDownload: FileDownload.init(with:storage:environment:),
         fromHistory: { true },
         timerProviding: .live,
-        uiApplication: .live
+        uiApplication: .live,
+        createRootCoordinator: RootCoordinator.init(interactor: viewFactory:sceneProvider:engagementKind:features:environment:)
     )
 }
 

@@ -3,6 +3,14 @@ import Foundation
 
 extension Glia {
     struct Environment {
+        typealias CreateRootCoordinator = (
+            _ interactor: Interactor,
+            _ viewFactory: ViewFactory,
+            _ sceneProvider: SceneProvider?,
+            _ engagementKind: EngagementKind,
+            _ features: Features,
+            _ environment: RootCoordinator.Environment
+        ) -> RootCoordinator
         var coreSdk: CoreSdkClient
         var chatStorage: ChatStorage
         var audioSession: AudioSession
@@ -18,6 +26,27 @@ extension Glia {
         var fromHistory: () -> Bool
         var timerProviding: FoundationBased.Timer.Providing
         var uiApplication: UIKitBased.UIApplication
+        var createRootCoordinator: CreateRootCoordinator
+    }
+}
+
+extension Glia.Environment {
+    func rootCoordinator(
+        interactor: Interactor,
+        viewFactory: ViewFactory,
+        sceneProvider: SceneProvider?,
+        engagementKind: EngagementKind,
+        features: Features,
+        environment: RootCoordinator.Environment
+    ) -> RootCoordinator {
+        self.createRootCoordinator(
+            interactor,
+            viewFactory,
+            sceneProvider,
+            engagementKind,
+            features,
+            environment
+        )
     }
 }
 

@@ -24,7 +24,18 @@ extension Glia.Environment {
             return true
         },
         timerProviding: .failing,
-        uiApplication: .failing
+        uiApplication: .failing,
+        createRootCoordinator: { _, _, _, _, _, _ in
+            fail("\(Self.self).createRootCoordinator")
+            return .mock(
+                interactor: .mock(environment: .failing),
+                viewFactory: .mock(environment: .failing),
+                sceneProvider: nil,
+                engagementKind: .none,
+                features: [],
+                environment: .failing
+            )
+        }
     )
 }
 

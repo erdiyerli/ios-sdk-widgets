@@ -17,7 +17,8 @@ extension Glia.Environment {
         createFileDownload: { _, _, _ in .mock() },
         fromHistory: { true },
         timerProviding: .mock,
-        uiApplication: .mock
+        uiApplication: .mock,
+        createRootCoordinator: RootCoordinator.mock
     )
 }
 
