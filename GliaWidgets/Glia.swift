@@ -207,7 +207,7 @@ public class Glia {
                 localFileThumbnailQueue: environment.localFileThumbnailQueue,
                 uiImage: environment.uiImage,
                 createFileDownload: environment.createFileDownload,
-                fromHistory: environment.fromHistory,
+                loadChatMessagesFromHistory: environment.loadChatMessagesFromHistory,
                 timerProviding: environment.timerProviding,
                 fetchSiteConfigurations: environment.coreSdk.fetchSiteConfigurations,
                 getCurrentEngagement: environment.coreSdk.getCurrentEngagement,

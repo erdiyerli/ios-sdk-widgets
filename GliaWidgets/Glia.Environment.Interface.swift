@@ -23,7 +23,7 @@ extension Glia {
         var localFileThumbnailQueue: FoundationBased.OperationQueue
         var uiImage: UIKitBased.UIImage
         var createFileDownload: FileDownloader.CreateFileDownload
-        var fromHistory: () -> Bool
+        var loadChatMessagesFromHistory: () -> Bool
         var timerProviding: FoundationBased.Timer.Providing
         var uiApplication: UIKitBased.UIApplication
         var createRootCoordinator: CreateRootCoordinator

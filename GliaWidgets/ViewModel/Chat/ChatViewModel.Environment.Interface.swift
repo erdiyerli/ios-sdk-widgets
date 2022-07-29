@@ -13,7 +13,7 @@ extension EngagementViewModel {
         var localFileThumbnailQueue: FoundationBased.OperationQueue
         var uiImage: UIKitBased.UIImage
         var createFileDownload: FileDownloader.CreateFileDownload
-        var fromHistory: () -> Bool
+        var loadChatMessagesFromHistory: () -> Bool
         var fetchSiteConfigurations: CoreSdkClient.FetchSiteConfigurations
         var getCurrentEngagement: CoreSdkClient.GetCurrentEngagement
         var timerProviding: FoundationBased.Timer.Providing

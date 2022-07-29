@@ -13,7 +13,7 @@ extension RootCoordinator {
         var localFileThumbnailQueue: FoundationBased.OperationQueue
         var uiImage: UIKitBased.UIImage
         var createFileDownload: FileDownloader.CreateFileDownload
-        var fromHistory: () -> Bool
+        var loadChatMessagesFromHistory: () -> Bool
         var timerProviding: FoundationBased.Timer.Providing
         var fetchSiteConfigurations: CoreSdkClient.FetchSiteConfigurations
         var getCurrentEngagement: CoreSdkClient.GetCurrentEngagement

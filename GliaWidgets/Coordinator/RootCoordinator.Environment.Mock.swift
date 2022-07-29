@@ -14,7 +14,7 @@ extension RootCoordinator.Environment {
         localFileThumbnailQueue: .mock(),
         uiImage: .mock,
         createFileDownload: { _, _, _ in .mock() },
-        fromHistory: { false },
+        loadChatMessagesFromHistory: { false },
         timerProviding: .mock,
         fetchSiteConfigurations: { _ in },
         getCurrentEngagement: { nil },

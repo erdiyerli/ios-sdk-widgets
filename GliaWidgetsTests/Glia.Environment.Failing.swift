@@ -19,8 +19,8 @@ extension Glia.Environment {
         localFileThumbnailQueue: .failing,
         uiImage: .failing,
         createFileDownload: { _, _, _ in .failing },
-        fromHistory: {
-            fail("\(Self.self).fromHistory")
+        loadChatMessagesFromHistory: {
+            fail("\(Self.self).loadChatMessagesFromHistory")
             return true
         },
         timerProviding: .failing,

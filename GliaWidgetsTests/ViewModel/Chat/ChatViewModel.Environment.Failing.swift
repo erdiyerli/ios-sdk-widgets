@@ -25,8 +25,8 @@ extension ChatViewModel.Environment {
             fail("\(Self.self).createFileDownload")
             return .failing
         },
-        fromHistory: {
-            fail("\(Self.self).fromHistory")
+        loadChatMessagesFromHistory: {
+            fail("\(Self.self).loadChatMessagesFromHistory")
             return true
         },
         fetchSiteConfigurations: { _ in
