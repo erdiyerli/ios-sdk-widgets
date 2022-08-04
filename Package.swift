@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-ios", from: "3.3.0"),
-        .package(url: "https://github.com/PureLayout/PureLayout", from: "3.1.9")
+        .package(url: "https://github.com/erdiyerli/PureLayout", .branchItem("master"))
     ],
     targets: [
         .binaryTarget(
